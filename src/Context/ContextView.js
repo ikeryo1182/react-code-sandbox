@@ -19,12 +19,13 @@ class CounterProvider extends React.Component {
     }
 
     render() {
+        const { children } = this.props;
         return (
             <CounterContext.Provider value={this.state} >
                 <p>
                     Provider: {this.state.count}
                 </p>
-                {this.props.children}
+                {children}
             </CounterContext.Provider>
         )
     }
