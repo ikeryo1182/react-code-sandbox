@@ -1,4 +1,5 @@
 import UseStateView from "./UseStateView"
+import UseEffectView from "./UseEffectView"
 import { Route, Link, Switch } from 'react-router-dom'
 
 const HooksIndexView = () => (
@@ -6,6 +7,7 @@ const HooksIndexView = () => (
         <div>
             <ul style={{ marginLeft: "10px" }}>
                 <li><Link to='/hooks/useState'>useState</Link></li>
+                <li><Link to='/hooks/useEffect'>useEffect</Link></li>
             </ul>
         </div>
         <Switch>
@@ -13,6 +15,7 @@ const HooksIndexView = () => (
                 <p>Hello ReactHooks!</p>
             </Route>
             <Route path='/hooks/useState' component={UseStateView} />
+            <Route path='/hooks/useEffect' component={UseEffectView} />
         </Switch>
     </div >
 )
