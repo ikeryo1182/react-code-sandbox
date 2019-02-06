@@ -13,7 +13,8 @@ module.exports = {
         inline: true,
         contentBase: path.join(__dirname, '/'),
         watchContentBase: true,
-        open: true
+        open: true,
+        historyApiFallback: true
     },
     devtool: "source-map",
     resolve: {
