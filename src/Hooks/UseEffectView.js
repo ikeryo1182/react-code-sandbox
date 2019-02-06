@@ -3,9 +3,15 @@ import React, { useState, useEffect } from "react"
 const useCount = () => {
     const [count, setCount] = useState(0);
 
-    // like componenDidMount, componentDidUpdate, componentWillUnmount
+    // like componentDidMount
     useEffect(() => {
         document.title = `count ${count}`
+        console.log("componnentDidMount")
+    }, [])
+
+    // like componentDidUpdate
+    useEffect(() => {
+        console.log("componentDidUpdate")
     })
 
     return { count, setCount }
