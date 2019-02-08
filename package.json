@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "React Sample Codes",
   "main": "src/index.jsx",
+  "license": "MIT",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --hot"
