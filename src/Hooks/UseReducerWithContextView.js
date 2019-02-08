@@ -2,14 +2,14 @@ import React, { createContext, useReducer, useContext } from "react"
 
 const initialCount = 1;
 
+const init = () => {
+    return { count: initialCount };
+}
+
 const actionType = {
     increment: "increment",
     decrement: "decrement",
     reset: "reset"
-}
-
-const init = (initialCount = 1) => {
-    return { count: initialCount };
 }
 
 const reducer = (state, action) => {
