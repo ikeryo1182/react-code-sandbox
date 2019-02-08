@@ -2,6 +2,7 @@ import UseStateView from "./UseStateView"
 import UseEffectView from "./UseEffectView"
 import UseContextView from "./useContextView"
 import UseReducerView from "./useReducerView"
+import UseReducerWithContextView from "./useReducerWithContextView"
 import { Route, Link, Switch } from 'react-router-dom'
 
 const HooksIndexView = () => (
@@ -12,6 +13,7 @@ const HooksIndexView = () => (
                 <li><Link to='/hooks/useEffect'>useEffect</Link></li>
                 <li><Link to='/hooks/useContext'>useContext</Link></li>
                 <li><Link to='/hooks/useReducer'>useReducer</Link></li>
+                <li><Link to='/hooks/useReducerWithContext'>useReducerWithContext</Link></li>
             </ul>
         </div>
         <Switch>
@@ -22,6 +24,7 @@ const HooksIndexView = () => (
             <Route path='/hooks/useEffect' component={UseEffectView} />
             <Route path='/hooks/useContext' component={UseContextView} />
             <Route path='/hooks/useReducer' component={UseReducerView} />
+            <Route path='/hooks/useReducerWithContext' component={UseReducerWithContextView} />
         </Switch>
     </div >
 )

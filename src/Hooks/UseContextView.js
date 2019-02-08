@@ -32,6 +32,7 @@ const CounterConsumer = () => {
 const UseContextView = () => {
     return (
         <div>
+            <h1>useContext</h1>
             <CounterProvider>
                 <CounterConsumer />
             </CounterProvider>

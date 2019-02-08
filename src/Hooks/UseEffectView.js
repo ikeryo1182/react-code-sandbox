@@ -21,6 +21,7 @@ const UseEffectView = () => {
     const { count, setCount } = useCount()
     return (
         <div>
+            <h1>useEffect</h1>
             <p>You clicked {count} times amd see document.title</p>
             <button onClick={() => setCount(count + 1)}>
                 Click me
