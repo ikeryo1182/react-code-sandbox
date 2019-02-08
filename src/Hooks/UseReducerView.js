@@ -19,7 +19,6 @@ const reducer = (state, action) => {
         case 'reset':
             return init(action.payload);
         default:
-            // A reducer must always return a valid state.
             return state;
     }
 }

@@ -21,13 +21,21 @@ const reducer = (state, action) => {
         case 'reset':
             return init(action.payload);
         default:
-            // A reducer must always return a valid state.
             return state;
     }
 }
 
 const CounterContext = createContext();
+
+const useCounterContext = () => {
+    return useContext(CounterContext);
+}
+
 const DispatchContext = createContext();
+
+const useDispatchContext = () => {
+    return useContext(DispatchContext);
+} 
 
 const CounterProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, initialCount, init);
@@ -41,8 +49,8 @@ const CounterProvider = ({ children }) => {
 }
 
 const Counter = () => {
-    const state = useContext(CounterContext);
-    const dispatch = useContext(DispatchContext);
+    const state = useCounterContext();
+    const dispatch = useDispatchContext();
     return (
         <div>
             Count: {state.count}
