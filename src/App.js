@@ -24,9 +24,7 @@ const App = () => (
 
 const Home = () => (
     <div>
-        <h2
-        >Welcome to React Code SandBox
-        </h2>
+        <p>Welcome to React Code SandBox（<a href="https://github.com/ikeryo1182/react-code-sandbox">GitHub</a>）</p>
     </div>
 )
 

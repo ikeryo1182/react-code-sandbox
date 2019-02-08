@@ -61,6 +61,7 @@ const UseReducerWithContextView = () => {
             <h1>useReducerWithContext</h1>
             <CounterProvider>
                 <Counter />
+                <Counter />
             </CounterProvider>
         </div>
     );

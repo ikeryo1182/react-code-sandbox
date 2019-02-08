@@ -35,6 +35,7 @@ const UseContextView = () => {
             <h1>useContext</h1>
             <CounterProvider>
                 <CounterConsumer />
+                <CounterConsumer />
             </CounterProvider>
         </div>
     )
