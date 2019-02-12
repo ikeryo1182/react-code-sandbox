@@ -12,7 +12,7 @@ const useCount = () => {
     // like componentDidUpdate
     useEffect(() => {
         console.log("componentDidUpdate")
-    })
+    },[count])
 
     return { count, setCount }
 }

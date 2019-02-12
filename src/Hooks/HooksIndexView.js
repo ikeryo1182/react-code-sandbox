@@ -3,6 +3,8 @@ import UseEffectView from "./UseEffectView"
 import UseContextView from "./useContextView"
 import UseReducerView from "./useReducerView"
 import UseReducerWithContextView from "./useReducerWithContextView"
+import UseMemoView from "./UseMemoView"
+import UseCallbackView from "./UseCallbackView"
 import { Route, Link, Switch } from 'react-router-dom'
 
 const HooksIndexView = () => (
@@ -14,6 +16,8 @@ const HooksIndexView = () => (
                 <li><Link to='/hooks/useContext'>useContext</Link></li>
                 <li><Link to='/hooks/useReducer'>useReducer</Link></li>
                 <li><Link to='/hooks/useReducerWithContext'>useReducerWithContext</Link></li>
+                <li><Link to='/hooks/useMemo'>useMemo</Link></li>
+                <li><Link to='/hooks/useCallback'>useCallback</Link></li>
             </ul>
         </div>
         <Switch>
@@ -25,6 +29,8 @@ const HooksIndexView = () => (
             <Route path='/hooks/useContext' component={UseContextView} />
             <Route path='/hooks/useReducer' component={UseReducerView} />
             <Route path='/hooks/useReducerWithContext' component={UseReducerWithContextView} />
+            <Route path='/hooks/useMemo' component={UseMemoView} />
+            <Route path='/hooks/useCallback' component={UseCallbackView} />
         </Switch>
     </div >
 )
