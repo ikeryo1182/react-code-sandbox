@@ -2,6 +2,7 @@ import * as React from 'react'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import HooksIndexView from "./Hooks/HooksIndexView"
 import ContextIndexView from "./Context/ContextIndexView"
+import OmnibusIndexView from "./Omnibus/OmnibusIndexView"
 
 const App = () => (
     <BrowserRouter>
@@ -11,12 +12,14 @@ const App = () => (
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/hooks'>Hooks</Link></li>
                     <li><Link to='/context'>Context</Link></li>
+                    <li><Link to='/omnibus'>Omnibus</Link></li>
                 </ul>
             </div>
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/hooks' component={HooksIndexView} />
                 <Route path='/context' component={ContextIndexView} />
+                <Route path='/omnibus' component={OmnibusIndexView} />
             </Switch>
         </>
     </BrowserRouter>
