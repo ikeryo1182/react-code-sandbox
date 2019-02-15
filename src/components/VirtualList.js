@@ -27,26 +27,23 @@ const VirtualList = ({
         }
     }
 
-    const judgeDisplay = (index) => {
+    const isDisplay = (index) => {
         return index >= startIndex && index < startIndex + displayedItemCount
     }
 
-    const createUlistStyle = (index) => {
-        return { margin: "0", padding: "0", listStyle: "none", position: "relative", top: index * itemHeight }
-    }
-
     const createRenderedItems = (items) => {
-        return items.filter((_, index) => judgeDisplay(index));
+        return items.filter((_, index) => isDisplay(index));
     }
 
     const outerStyle = { width: boxWidth, height: boxHeight, overflowY: "scroll" }
     const innerStyle = { height: itemCount * itemHeight }
+    const ulistStyle = { margin: "0", padding: "0", listStyle: "none", position: "relative", top: startIndex * itemHeight }
     const itemStyle = { height: itemHeight }
 
     return (
         <div onScroll={handleScroll} style={outerStyle}>
             <div style={innerStyle}>
-                <ul style={createUlistStyle(startIndex)}>
+                <ul style={ulistStyle}>
                     {createRenderedItems(items).map((item, index) =>
                         <li key={index} style={itemStyle}>
                             {item}
