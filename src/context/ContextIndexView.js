@@ -1,10 +1,10 @@
-import OmnibusView from "./OmnibusView"
+import ContextView from "./ContextView"
 import { Route, Switch } from 'react-router-dom'
 
 const HooksIndexView = () => (
     <div>
         <Switch>
-            <Route path='/omnibus' component={OmnibusView} />
+            <Route exact path='/context' component={ContextView} />
         </Switch>
     </div >
 )

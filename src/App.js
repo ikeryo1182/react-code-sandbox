@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
-import HooksIndexView from "./Hooks/HooksIndexView"
-import ContextIndexView from "./Context/ContextIndexView"
-import OmnibusIndexView from "./Omnibus/OmnibusIndexView"
+import HooksIndexView from "./hooks/HooksIndexView"
+import ContextIndexView from "./context/ContextIndexView"
+import OmnibusIndexView from "./omnibus/OmnibusIndexView"
 
 const App = () => (
     <BrowserRouter>
