@@ -8,7 +8,7 @@ module.exports = {
     mode: "development",
     output: {
         publicPath: "/"
-    }, 
+    },
     devServer: {
         inline: true,
         contentBase: path.join(__dirname, '/'),
@@ -31,6 +31,11 @@ module.exports = {
                 enforce: "pre",
                 test: /\.js$/,
                 loader: "source-map-loader"
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'file-loader',
+                options: {},
             }
         ]
     },
