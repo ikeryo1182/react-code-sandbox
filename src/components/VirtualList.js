@@ -2,10 +2,8 @@ import React, { useState } from "react"
 
 const MARGIN_ITEM_COUNT = 3;
 
-
 const useStartIndex = () => {
     const [startIndex, setStartIndex] = useState(0);
-
     return { startIndex, setStartIndex };
 }
 
@@ -32,7 +30,7 @@ const VirtualList = ({
         return index >= startIndex && index < startIndex + displayedItemCount
     }
 
-    const createRenderedItems = (items) => {
+    const filterItems = (items) => {
         return items.filter((_, index) => isDisplay(index));
     }
 
@@ -45,7 +43,7 @@ const VirtualList = ({
         <div onScroll={handleScroll} style={outerStyle}>
             <div style={innerStyle}>
                 <ul style={ulistStyle}>
-                    {createRenderedItems(items).map((item, index) =>
+                    {filterItems(items).map((item, index) =>
                         <li key={index} style={itemStyle}>
                             {item}
                         </li>
